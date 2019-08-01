@@ -1,6 +1,6 @@
 # pruebaElastic
 
-#Importacion de MongodB a elastic 
+#IMPORTACION DE MONGOdB A ELASTIC 
 
 primero ejecutamos mongoexport 
 
