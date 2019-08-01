@@ -64,7 +64,14 @@ module.exports = {
             }
           }          
       });
-      res.json({data: response.aggregations.usuarios.buckets});
+
+      const data = response.aggregations.usuarios.buckets;
+      for(var i = 0; i < data.length; i++){
+          var item = data[i];            
+          usuarios.push({usuario:item.key,total:item.doc_count});
+      } 
+
+      res.json({usuarios});
   },
 
   GetTweetOverTime: async(req,res) => {
@@ -105,7 +112,7 @@ module.exports = {
         var date = item.key_as_string.split(' ');        
         tweetsOverTime.push({fecha:date[0],hora:date[1],total:item.doc_count});
     }    
-    res.json({total:tweetsOverTime.length,data: tweetsOverTime});
+    res.json({data: tweetsOverTime});
 
   }
 
