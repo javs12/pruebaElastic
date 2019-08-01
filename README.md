@@ -1,6 +1,26 @@
 # pruebaElastic
+#CORRER LA APP
+abrir la consola 
+colocarnos en la carpeta de la aplicación
+C:\Users\HP\Documents\practicas\prueba_elastic\pruebaElastic>
+y en la consola escribir "npm run dev"
+el programa estara corriendo en : http://localhost:3000/
 
-#Importacion de MongodB a elastic 
+los endpoints son :
+http://localhost:3000/app/getTweets
+http://localhost:3000/app/getTopByUser
+{
+	"userName":"ayudagbmhb"
+}
+http://localhost:3000/app/getTopUser
+http://localhost:3000/app/getTweetsOverTime
+{
+	"fechaInicio":"2015-07-08",
+	"fechaFin":"2015-07-15"
+}
+
+
+#IMPORTACION DE MONGOdB A ELASTIC 
 
 primero ejecutamos mongoexport 
 
